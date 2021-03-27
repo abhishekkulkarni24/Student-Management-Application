@@ -1,18 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "3c9aefeb-6c9a-4328-a6a1-f3142c31a2ac"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firstprj": {
+    "Student-Management-Application": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/firstprj",
+            "outputPath": "dist/Student-Management-Application",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -53,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -68,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "firstprj:build"
+            "browserTarget": "Student-Management-Application:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "firstprj:build:production"
+              "browserTarget": "Student-Management-Application:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firstprj:build"
+            "browserTarget": "Student-Management-Application:build"
           }
         },
         "test": {
@@ -116,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "firstprj:serve"
+            "devServerTarget": "Student-Management-Application:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "firstprj:serve:production"
+              "devServerTarget": "Student-Management-Application:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "firstprj"
+  "defaultProject": "Student-Management-Application"
 }
